@@ -22,7 +22,7 @@ class PythonMappedEnum(sa_types.TypeDecorator):
         self.python_enum_type = python_enum_type
         self.kwargs = kwargs
         enum_args = [x.value for x in python_enum_type]
-        super(PythonMappedEnum, self).__init__(*enum_args, **self.kwargs)
+        super().__init__(*enum_args, **self.kwargs)
 
     def process_bind_param(self, value: PythonEnum, dialect):
         """ Convert to postgres value

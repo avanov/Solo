@@ -1,8 +1,7 @@
 import argparse
-from typing import Dict, Any, Iterable, Optional, List
+from typing import Dict, Any, Optional, List
 
 from alembic import command as alembic_cmd
-from solo.cli.util import parse_app_config
 from .config import alembic_config_from_solo
 
 
